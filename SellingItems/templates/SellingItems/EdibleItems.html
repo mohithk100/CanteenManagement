@@ -1,0 +1,25 @@
+{% extends 'SellingItems/base.html' %}
+
+
+{% block content %}
+		<div class="container">
+			<div class="row">
+				{% for EdibleItem in EdibleItem_objects %}
+				<div class="col-lg-4" style="padding: 20px;">
+					<div class="card" style="width: 20rem; padding: 20px;">
+					  <img class="card-img-top" src={{ EdibleItem.Image.url }} alt="Card image cap" width="200" height="200">
+					  <div class="card-block">
+					  	<center>
+						    <h4 class="card-title">{{ EdibleItem.Name }}</h4>
+						    <p class="card-text">Price : {{EdibleItem.Price }} Rupees</p>
+						    <a href="#" class="btn btn-primary">ADD TO CART</a>
+					    </center>
+					  </div>
+					</div>
+
+				</div>
+				
+				{% endfor %}
+			</div>
+		</div>
+{% endblock %}

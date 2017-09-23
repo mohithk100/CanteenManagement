@@ -1,0 +1,24 @@
+{% extends 'SellingItems/base.html' %}
+
+
+{% block content %}
+	
+		<div class="container">
+			<div class="row">
+				{% for Beverage in Beverage_objects %}
+				<div class="col-lg-4" style="padding: 20px;">
+					<div class="card" style="width: 20rem; padding: 20px;">
+					  <img class="card-img-top" src={{ Beverage.Image.url }} alt="Card image cap" width="200" height="200">
+					  <div class="card-block">
+					  	<center>
+						    <h4 class="card-title">{{ Beverage.Name }}</h4>
+						    <p class="card-text">Price : {{ Beverage.Price }} Rupees</p>
+						    <a href="#" class="btn btn-primary">ADD TO CART</a>
+					    </center>
+					  </div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+{% endblock %}
