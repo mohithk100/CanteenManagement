@@ -23,6 +23,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^products/' , include('SellingItems.urls' )),
+    url(r'^user/' , include('User.urls')),
     url(r'^api/users/',include('User.api.urls')),
 
 

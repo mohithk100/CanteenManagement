@@ -12,4 +12,5 @@ class UserProfileAdmin(UserAdmin):
 	inlines = [UserProfileInline,]
 
 admin.site.register(User,UserProfileAdmin)
+
 			
